@@ -1,9 +1,9 @@
-var caesar =
-  caesar ||
+var cesar =
+  cesar ||
   (function () {
     var doStaff = function (txt, desp, action) {
       var replace = (function () {
-        var abc = [
+        var abecedario = [
           "a",
           "b",
           "c",
@@ -31,9 +31,9 @@ var caesar =
           "y",
           "z",
         ];
-        var l = abc.length;
+        var l = abecedario.length;
         return function (c) {
-          var i = abc.indexOf(c.toLowerCase());
+          var i = abecedario.indexOf(c.toLowerCase());
           if (i != -1) {
             var pos = i;
             if (action) {
@@ -45,7 +45,7 @@ var caesar =
               pos -= desp;
               pos += pos < 0 ? l : 0;
             }
-            return abc[pos];
+            return abecedario[pos];
           }
           return c;
         };
@@ -67,13 +67,13 @@ var caesar =
   })();
 
 function codificar() {
-  document.getElementById("resultado").innerHTML = caesar.encode(
+  document.getElementById("resultado").innerHTML = cesar.encode(
     document.getElementById("cadena").value,
     3
   );
 }
 function decodificar() {
-  document.getElementById("resultado").innerHTML = caesar.decode(
+  document.getElementById("resultado").innerHTML = cesar.decode(
     document.getElementById("cadena").value,
     3
   );
