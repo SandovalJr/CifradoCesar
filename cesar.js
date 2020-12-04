@@ -37,11 +37,11 @@ var caesar =
           if (i != -1) {
             var pos = i;
             if (action) {
-              // forward
+              // adelante
               pos += desp;
               pos -= pos >= l ? l : 0;
             } else {
-              // backward
+              // hacia atras
               pos -= desp;
               pos += pos < 0 ? l : 0;
             }
