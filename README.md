@@ -1,3 +1,3 @@
 # CifradoCesar
 
-![](img/cifrado_cesar.png)
+![](img/cifrado_cesar.PNG)
